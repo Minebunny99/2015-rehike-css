@@ -1,0 +1,279 @@
+/* ==UserStyle==
+@name           2015/16 look for rehike
+@namespace      github.com/openstyles/stylus
+@version        1.0.6
+@description    Makes it look like late 2015/early 2016
+@author         EpicbonnieSFM
+@preprocessor stylus
+@var checkbox whattowatch "Old What To Watch Text" 1
+@var checkbox oldmysubsicon "Old My Subscriptions Icon" 1
+@var checkbox hidetrendingguide "Hide Trending Guide" 1
+@var checkbox searchbtn "Old search button icon" 1
+@var checkbox hidesearchtext "Hide Search Text" 1
+@var select logo "Logo" ["Lzero:default", "Ltwo:2015", "Lthree:2013", "Lfour:2011"]
+@var checkbox guidebutton "Red guide button and right of logo" 1
+@var checkbox smallwatchthumbs "Small Watch thumbs" 1
+@var checkbox oldupnexttext "Old Up Next Text" 1
+@var checkbox bigtitletext "Big Title Text" 1
+@var checkbox oldshare "Old share Button" 1
+@var checkbox oldnoft "Old Notifications Icon" 1
+==/UserStyle== */
+@-moz-document domain("www.youtube.com") {
+    if guidebutton {
+        #appbar-guide-button {
+            height: 28px;
+            width: 46px;
+            margin-top: 2px;
+            margin-left: -1px;
+        }
+
+        #yt-masthead .yt-masthead-logo-container {
+            width: 200px;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: Left;
+        }
+
+        #appbar-guide-button .yt-uix-button-icon-wrapper::after {
+            content: '';
+            display: inline-block;
+            border-width: 3px 3px 0;
+            border-top-color: #b8b8b8 !important;
+            border-color: transparent;
+            border-style: solid;
+            position: relative;
+            top: 2px;
+            left: 2px;
+        }
+
+        #masthead-positioner:hover #appbar-guide-button .yt-uix-button-icon-wrapper::after {
+            border-top-color: #666 !importnat;
+        }
+
+        #masthead-positioner:hover #appbar-guide-button {
+            background: #f8f8f8;
+            border-color: #d3d3d3;
+        }
+
+        #appbar-guide-button:hover {
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.10);
+        }
+
+        #appbar-guide-button:active {
+            box-shadow: inset 0 1px 0 #ddd;
+        }
+
+        #appbar-guide-button:hover:focus,
+        #appbar-guide-button:focus {
+            box-shadow: 0 0 0 2px rgba(27, 127, 204, 0.4);
+        }
+        .show-guide #appbar-guide-button > span:after,
+        .show-guide #masthead-positioner:hover #appbar-guide-button > span:after {
+            border-top-color: #e63127 !important
+        }
+        .show-guide .yt-uix-button-icon-appbar-guide,
+        .show-guide #masthead-positioner:hover .yt-uix-button-icon-appbar-guide {
+            background: no-repeat url(//s.ytimg.com/yts/imgbin/www-hitchhiker-vflbKBZkj.png) -29px -1244px;
+        }
+    }
+
+    if logo==Ltwo {
+        #yt-masthead #logo-container .logo,
+        #footer-logo .footer-logo-icon {
+            background: no-repeat url(//s.ytimg.com/yts/imgbin/www-hitchhiker-vfli_XxZt.png) -167px -205px;
+            width: 72px;
+            height: 30px;
+        }
+    }
+    if logo==Lfour {
+        #yt-masthead #logo-container .logo,
+        #footer-logo .footer-logo-icon {
+            background: no-repeat url(//i.imgur.com/2NsZ2QH.png) -167px -205px;
+            width: 73px;
+            height: 30px;
+        }
+    }
+    if logo==Lthree {
+        #yt-masthead #logo-container .logo,
+        #footer-logo .footer-logo-icon {
+            width: 72px !important;
+            background: no-repeat url(//s.ytimg.com/yts/imgbin/www-hitchhiker-vflmnaCdT.png) -90px -108px !important;
+        }
+    }
+    if logo {
+        #yt-masthead .yt-masthead-logo-container {
+            margin-top: 2px
+        }
+        #yt-masthead .yt-masthead-logo-container > button#appbar-guide-button {
+            margin-bottom: 0;
+            margin-top: 2px
+        }
+        #masthead-positioner #appbar-guide-button {
+            height: 28px;
+        }
+    }
+
+    .yt-uix-button-icon-wrapper {
+        margin-left: -2px;
+    }
+
+    #yt-masthead-container {
+        padding-bottom: 10px;
+    }
+
+    if hidesearchtext {
+        #masthead-search-term::placeholder {
+            color: transparent;
+        }
+    }
+    if searchbtn {
+        #masthead-search .search-btn-component {
+            width: 65px;
+        }
+        #masthead-search .search-btn-component .yt-uix-button-content {
+            background: no-repeat url(//s.ytimg.com/yts/imgbin/www-hitchhiker-vfli_XxZt.png) -145px -287px;
+            margin-top: 2px;
+        }
+    }
+    if smallwatchthumbs {
+        .related-list-item .thumb-wrapper,
+        .related-list-item .thumb-wrapper img,
+        .yt-thumb-168,
+        .yt-thumb-168 img {
+            width: 120px;
+        }
+
+        .related-list-item .thumb-wrapper,
+        .related-list-item .thumb-wrapper img,
+        .yt-uix-simple-thumb-related,
+        .yt-thumb-168,
+        .yt-thumb-168 img {
+            height: 68px;
+        }
+        .yt-pl-thumb-overlay-text {
+            font-size: 11px;
+        }
+
+        .yt-pl-thumb .formatted-video-count-label b {
+            font-size: 14px;
+        }
+
+        .yt-pl-thumb .formatted-video-count-label {
+            font-size: 8px;
+        }
+        .related-list-item .content-link {
+            min-height: 68px;
+        }
+
+        .related-list-item .content-wrapper {
+            margin-left: 133px;
+        }
+
+        .video-list .video-list-item .title {
+            font-size: 13px;
+            max-height: 2.4em;
+        }
+    }
+    .appbar-hidden #masthead-positioner-height-offset {
+        height: 50px;
+    }
+
+    .yt-subscription-button-subscriber-count-branded-horizontal {
+        margin-left: -1px;
+    }
+
+    .yt-pl-icon.yt-pl-icon-mix {
+        background: no-repeat url(//s.ytimg.com/yts/imgbin/www-hitchhiker-vfl3T2Agh.png) -393px 0;
+        background-size: auto;
+        width: 24px;
+        height: 24px;
+    }
+
+    .yt-pl-icon {
+        background: no-repeat url(//s.ytimg.com/yts/imgbin/www-hitchhiker-vfl3T2Agh.png) -863px -75px;
+        background-size: auto;
+        width: 18px;
+        height: 18px;
+    }
+    if oldshare {
+        .action-panel-trigger-share::before {
+            background: no-repeat url(//s.ytimg.com/yts/imgbin/www-hitchhiker-vfl3T2Agh.png) -261px -13px;
+            background-size: auto;
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    #startSegmentButton,
+    #cancelSegmentButton,
+    #deleteButton,
+    #submitButton,
+    #infoButton,
+    .standalone-collection-badge-renderer-text,
+    .ytp-chapter-container {
+        display: none !important;
+    }
+
+    .yt-uix-checkbox-on-off {
+        vertical-align: inherit;
+    }
+
+    .ytp-scrubber-container {
+        left: 2px;
+    }
+    if bigtitletext {
+        #watch7-headline h1 {
+            font-size: 24px;
+        }
+    }
+    if whattowatch {
+        #what_to_watch-guide-item .display-name span {
+            font-size: 0;
+            line-height: 0;
+        }
+        #what_to_watch-guide-item .display-name:after {
+            content: "What to Watch";
+            font-size: 13px;
+            line-height: 20px;
+            margin-left: -2.6px;
+        }
+    }
+    if oldupnexttext {
+        #watch7-sidebar .watch-sidebar-head {
+            font-size: 0;
+            line-height: 0;
+        }
+
+        #watch7-sidebar .watch-sidebar-head:after {
+            content: 'Up Next';
+            font-size: 13px;
+            line-height: 1.4;
+        }
+    }
+    if oldmysubsicon {
+        .guide-item .guide-my-subscriptions-icon {
+            background: no-repeat url(//s.ytimg.com/yts/imgbin/www-hitchhiker-vflynt-iQ.webp) -112px -207px;
+            background-size: auto;
+            width: 20px;
+            height: 20px
+        }
+        .guide-item:hover .guide-my-subscriptions-icon,
+        .guide-item.guide-item-selected .guide-my-subscriptions-icon {
+            background: no-repeat url(//s.ytimg.com/yts/imgbin/www-hitchhiker-vflynt-iQ.webp) -112px -207px;
+            background-position: -392px -28px
+        }
+    }
+    if hidetrendingguide {
+        #trending-guide-item {
+            display: none;
+        }
+    }
+    if oldnoft {
+        .yt-uix-subscription-preferences-button:before {
+            background: no-repeat url(//s.ytimg.com/yts/imgbin/www-hitchhiker-vflAQJlLF.png) -28px -40px !important;
+            background-size: auto !important;
+            width: 12px !important;
+            height: 12px !important
+        }
+    }
+}

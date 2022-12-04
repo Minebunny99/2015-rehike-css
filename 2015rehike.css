@@ -2,7 +2,7 @@
 @name           2015/16 look for rehike
 @namespace      https://github.com/Minebunny99
 @updateURL      https://github.com/Minebunny99/2015-rehike-css/2015rehike.css
-@version        1.0.7
+@version        1.0.8
 @description    Makes it look like late 2015/early 2016
 @author         EpicbonnieSFM
 @preprocessor stylus
@@ -180,6 +180,11 @@
         .video-list .video-list-item .title {
             font-size: 13px;
             max-height: 2.4em;
+        }
+        .yt-badge-list {
+            margin-left: 69px;
+            position: absolute;
+            top: 49px;
         }
     }
     .appbar-hidden #masthead-positioner-height-offset {

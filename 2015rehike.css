@@ -93,6 +93,9 @@
         .appbar-hidden #masthead-positioner-height-offset {
             height: 50px;
         }
+        .yt-uix-button-icon-wrapper {
+            margin-left: -2px;
+        }
     }
     if logo==Lfour {
         #yt-masthead #logo-container .logo,
@@ -107,6 +110,9 @@
         .appbar-hidden #masthead-positioner-height-offset {
             height: 50px;
         }
+        .yt-uix-button-icon-wrapper {
+            margin-left: -2px;
+        }
     }
     if logo==Lthree {
         #yt-masthead #logo-container .logo,
@@ -120,10 +126,9 @@
         .appbar-hidden #masthead-positioner-height-offset {
             height: 50px;
         }
-    }
-
-    .yt-uix-button-icon-wrapper {
-        margin-left: -2px;
+        .yt-uix-button-icon-wrapper {
+            margin-left: -2px;
+        }
     }
 
     if hidesearchtext {

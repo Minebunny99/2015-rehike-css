@@ -90,6 +90,9 @@
         #yt-masthead-container {
             padding-bottom: 10px;
         }
+        .appbar-hidden #masthead-positioner-height-offset {
+            height: 50px;
+        }
     }
     if logo==Lfour {
         #yt-masthead #logo-container .logo,
@@ -101,6 +104,9 @@
         #yt-masthead-container {
             padding-bottom: 10px;
         }
+        .appbar-hidden #masthead-positioner-height-offset {
+            height: 50px;
+        }
     }
     if logo==Lthree {
         #yt-masthead #logo-container .logo,
@@ -111,17 +117,8 @@
         #yt-masthead-container {
             padding-bottom: 10px;
         }
-    }
-    if logo {
-        #yt-masthead .yt-masthead-logo-container {
-            margin-top: 2px
-        }
-        #yt-masthead .yt-masthead-logo-container > button#appbar-guide-button {
-            margin-bottom: 0;
-            margin-top: 2px
-        }
-        #masthead-positioner #appbar-guide-button {
-            height: 28px;
+        .appbar-hidden #masthead-positioner-height-offset {
+            height: 50px;
         }
     }
 
@@ -186,27 +183,23 @@
             position: absolute;
             top: 49px;
         }
-    }
-    .appbar-hidden #masthead-positioner-height-offset {
-        height: 50px;
+        .yt-pl-icon.yt-pl-icon-mix {
+            background: no-repeat url(//s.ytimg.com/yts/imgbin/www-hitchhiker-vfl3T2Agh.png) -393px 0;
+            background-size: auto;
+            width: 24px;
+            height: 24px;
+        }
+
+        .yt-pl-icon {
+            background: no-repeat url(//s.ytimg.com/yts/imgbin/www-hitchhiker-vfl3T2Agh.png) -863px -75px;
+            background-size: auto;
+            width: 18px;
+            height: 18px;
+        }
     }
 
     .yt-subscription-button-subscriber-count-branded-horizontal {
         margin-left: -1px;
-    }
-
-    .yt-pl-icon.yt-pl-icon-mix {
-        background: no-repeat url(//s.ytimg.com/yts/imgbin/www-hitchhiker-vfl3T2Agh.png) -393px 0;
-        background-size: auto;
-        width: 24px;
-        height: 24px;
-    }
-
-    .yt-pl-icon {
-        background: no-repeat url(//s.ytimg.com/yts/imgbin/www-hitchhiker-vfl3T2Agh.png) -863px -75px;
-        background-size: auto;
-        width: 18px;
-        height: 18px;
     }
     if oldshare {
         .action-panel-trigger-share::before {

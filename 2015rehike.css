@@ -93,16 +93,6 @@
         .appbar-hidden #masthead-positioner-height-offset {
             height: 50px;
         }
-        #yt-masthead .yt-masthead-logo-container {
-            margin-top: 2px
-        }
-        #yt-masthead .yt-masthead-logo-container > button#appbar-guide-button {
-            margin-bottom: 0;
-            margin-top: 2px
-        }
-        #masthead-positioner #appbar-guide-button {
-            height: 28px;
-        }
         .yt-uix-button-icon-wrapper {
             margin-left: -2px;
         }
@@ -120,16 +110,6 @@
         .appbar-hidden #masthead-positioner-height-offset {
             height: 50px;
         }
-        #yt-masthead .yt-masthead-logo-container {
-            margin-top: 2px
-        }
-        #yt-masthead .yt-masthead-logo-container > button#appbar-guide-button {
-            margin-bottom: 0;
-            margin-top: 2px
-        }
-        #masthead-positioner #appbar-guide-button {
-            height: 28px;
-        }
         .yt-uix-button-icon-wrapper {
             margin-left: -2px;
         }
@@ -145,16 +125,6 @@
         }
         .appbar-hidden #masthead-positioner-height-offset {
             height: 50px;
-        }
-        #yt-masthead .yt-masthead-logo-container {
-            margin-top: 2px
-        }
-        #yt-masthead .yt-masthead-logo-container > button#appbar-guide-button {
-            margin-bottom: 0;
-            margin-top: 2px
-        }
-        #masthead-positioner #appbar-guide-button {
-            height: 28px;
         }
         .yt-uix-button-icon-wrapper {
             margin-left: -2px;

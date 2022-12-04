@@ -2,7 +2,7 @@
 @name           2015/16 look for rehike
 @namespace      https://github.com/Minebunny99
 @updateURL      https://github.com/Minebunny99/2015-rehike-css/2015rehike.css
-@version        1.0.6
+@version        1.0.7
 @description    Makes it look like late 2015/early 2016
 @author         EpicbonnieSFM
 @preprocessor stylus
@@ -13,8 +13,10 @@
 @var checkbox hidesearchtext "Hide Search Text" 1
 @var select logo "Logo" ["Lzero:default", "Ltwo:2015", "Lthree:2013", "Lfour:2011"]
 @var checkbox guidebutton "Red guide button and right of logo" 1
+@var checkbox arialz "Use arial" 1
 @var checkbox smallwatchthumbs "Small Watch thumbs" 1
 @var checkbox oldupnexttext "Old Up Next Text" 1
+@var checkbox oldautoPlaytext "Old Autoplay Bold" 1
 @var checkbox bigtitletext "Big Title Text" 1
 @var checkbox oldshare "Old share Button" 1
 @var checkbox oldnoft "Old Notifications Icon" 1
@@ -85,6 +87,9 @@
             width: 72px;
             height: 30px;
         }
+        #yt-masthead-container {
+            padding-bottom: 10px;
+        }
     }
     if logo==Lfour {
         #yt-masthead #logo-container .logo,
@@ -93,12 +98,18 @@
             width: 73px;
             height: 30px;
         }
+        #yt-masthead-container {
+            padding-bottom: 10px;
+        }
     }
     if logo==Lthree {
         #yt-masthead #logo-container .logo,
         #footer-logo .footer-logo-icon {
             width: 72px !important;
             background: no-repeat url(//s.ytimg.com/yts/imgbin/www-hitchhiker-vflmnaCdT.png) -90px -108px !important;
+        }
+        #yt-masthead-container {
+            padding-bottom: 10px;
         }
     }
     if logo {
@@ -116,10 +127,6 @@
 
     .yt-uix-button-icon-wrapper {
         margin-left: -2px;
-    }
-
-    #yt-masthead-container {
-        padding-bottom: 10px;
     }
 
     if hidesearchtext {
@@ -234,7 +241,7 @@
         }
         #what_to_watch-guide-item .display-name:after {
             content: "What to Watch";
-            font-size: 13px;
+            font-size: 12px;
             line-height: 20px;
             margin-left: -2.6px;
         }
@@ -249,6 +256,17 @@
             content: 'Up Next';
             font-size: 13px;
             line-height: 1.4;
+        }
+    }
+    if oldautoPlaytext {
+        .autoplay-bar .checkbox-on-off {
+            position: absolute;
+            top: 0;
+            right: 0;
+            vertical-align: top;
+            font-size: 13px;
+            font-weight: bold;
+            color: #767676;
         }
     }
     if oldmysubsicon {
@@ -271,10 +289,65 @@
     }
     if oldnoft {
         .yt-uix-subscription-preferences-button:before {
-            background: no-repeat url(//s.ytimg.com/yts/imgbin/www-hitchhiker-vflAQJlLF.png) -28px -40px !important;
+            background: no-repeat url(//s.ytimg.com/yts/imgbin/www-hitchhiker-vflkWou0A.png) -476px -175px !important;
             background-size: auto !important;
-            width: 12px !important;
-            height: 12px !important
+            width: 13px !important;
+            height: 13px !important;
+        }
+        .yt-uix-subscription-preferences-button:hover:before {
+            background: no-repeat url(//s.ytimg.com/yts/imgbin/www-hitchhiker-vflkWou0A.png) -388px -262px !important;
+            background-size: auto !important;
+            width: 13px !important;
+            height: 13px !important;
+        }
+    }
+    if arialz {
+        body,
+        input,
+        button,
+        textarea,
+        select {
+            font-family: arial, sans-serif;
+        }
+        a.yt-uix-button-epic-nav-item.selected,
+        a.yt-uix-button-epic-nav-item.yt-uix-button-toggled,
+        button.yt-uix-button-epic-nav-item.selected,
+        button.yt-uix-button-epic-nav-item.yt-uix-button-toggled,
+        .epic-nav-item.selected,
+        .epic-nav-item.yt-uix-button-toggled,
+        .epic-nav-item-heading,
+        h3,
+        h4,
+        h5,
+        h6,
+        .yt-uix-button,
+        strong,
+        b,
+        .video-list .video-list-item .title,
+        #watch-header .yt-user-info a,
+        .branded-page-base-bold-titles .channel-header .branded-page-header-title .branded-page-header-title-link,
+        .branded-page-base-bold-titles .branded-page-module-title,
+        li.guide-section h3 {
+            font-weight: bold
+        }
+        #footer-links-primary {
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        #footer-links-secondary a {
+            font-weight: bold;
+        }
+        .video-list .video-list-item .title {
+            color: #333;
+            font-size: 13px;
+            font-weight: bold;
+        }
+        #guide-container .guide-item.guide-item-selected {
+            font-weight: bold;
+        }
+        .branded-page-related-channels h3 a,
+        .branded-page-related-channels h3 {
+            font-weight: bold;
         }
     }
 }

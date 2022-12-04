@@ -6,20 +6,20 @@
 @description    Makes it look like late 2015/early 2016
 @author         EpicbonnieSFM
 @preprocessor stylus
-@var checkbox whattowatch "Old What To Watch Text" 1
-@var checkbox oldmysubsicon "Old My Subscriptions Icon" 1
-@var checkbox hidetrendingguide "Hide Trending Guide" 1
-@var checkbox searchbtn "Old search button icon" 1
-@var checkbox hidesearchtext "Hide Search Text" 1
+@var checkbox whattowatch "Old What To Watch Text" 0
+@var checkbox oldmysubsicon "Old My Subscriptions Icon" 0
+@var checkbox hidetrendingguide "Hide Trending Guide" 0
+@var checkbox searchbtn "Old search button icon" 0
+@var checkbox hidesearchtext "Hide Search Text" 0
 @var select logo "Logo" ["Lzero:default", "Ltwo:2015", "Lthree:2013", "Lfour:2011"]
-@var checkbox guidebutton "Red guide button and right of logo" 1
-@var checkbox arialz "Use arial" 1
-@var checkbox smallwatchthumbs "Small Watch thumbs" 1
-@var checkbox oldupnexttext "Old Up Next Text" 1
-@var checkbox oldautoPlaytext "Old Autoplay Bold" 1
-@var checkbox bigtitletext "Big Title Text" 1
-@var checkbox oldshare "Old share Button" 1
-@var checkbox oldnoft "Old Notifications Icon" 1
+@var checkbox guidebutton "Red guide button and right of logo" 0
+@var checkbox arialz "Use arial" 0
+@var checkbox smallwatchthumbs "Small Watch thumbs" 0
+@var checkbox oldupnexttext "Old Up Next Text" 0
+@var checkbox oldautoPlaytext "Old Autoplay Bold" 0
+@var checkbox bigtitletext "Big Title Text" 0
+@var checkbox oldshare "Old share Button" 0
+@var checkbox oldnoft "Old Notifications Icon" 0
 ==/UserStyle== */
 @-moz-document domain("www.youtube.com") {
     if guidebutton {

@@ -2,7 +2,7 @@
 @name           2015/16 look for rehike
 @namespace      https://github.com/Minebunny99
 @updateURL      https://github.com/Minebunny99/2015-rehike-css/2015rehike.css
-@version        1.1.3
+@version        1.1.4
 @description    Makes it look like late 2015/early 2016
 @author         EpicbonnieSFM
 @preprocessor stylus
@@ -17,6 +17,7 @@
 @var checkbox smallwatchthumbs "Small Watch thumbs" 0
 @var checkbox oldupnexttext "Old Up Next Text" 0
 @var checkbox oldautoPlaytext "Old Autoplay Bold" 0
+@var checkbox noautoplay "Remove autoplay" 0
 @var checkbox bigtitletext "Big Title Text" 0
 @var checkbox oldshare "Old share Button" 0
 @var checkbox oldnoft "Old Notifications Icon" 0
@@ -237,6 +238,11 @@
         #watch7-headline h1 {
             font-size: 24px;
         }
+         .watch-title-container,
+        .video-metadata-renderer-music-pass-badge-renderer {
+            display: table-cell;
+            vertical-align: top;
+        }
     }
     if whattowatch {
         #what_to_watch-guide-item .display-name span {
@@ -371,4 +377,19 @@
         padding-top: 0px;
     }
   }
+   if noautoplay {
+        .watch-sidebar-section {
+            margin-bottom: 0 !important;
+        }
+
+        .watch-sidebar-separation-line,
+        .watch-sidebar-head,
+        .checkbox-on-off {
+            display: none;
+        }
+
+        .watch-sidebar-section:first-child .video-list-item:last-child {
+            margin-bottom: 15px !important;
+        }
+    }
 }

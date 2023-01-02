@@ -2,7 +2,7 @@
 @name           2015/16 look for rehike
 @namespace      https://github.com/Minebunny99
 @updateURL      https://github.com/Minebunny99/2015-rehike-css/2015rehike.css
-@version        1.1.4
+@version        1.1.5
 @description    Makes it look like early-mid-late 2015/early-mid 2016
 @author         EpicbonnieSFM
 @preprocessor stylus
@@ -21,7 +21,8 @@
 @var checkbox bigtitletext "Big Title Text" 0
 @var checkbox oldshare "Old share Button" 0
 @var checkbox oldnoft "Old Notifications Icon" 0
-@var checkbox olddec "Old Description size" 1
+@var checkbox Nosubscountwhensubsed "Hide Subscriber Count When Subscribed to someone" 0 
+@var checkbox olddec "Old Description size" 0
 ==/UserStyle== */
 @-moz-document domain("www.youtube.com") {
     if guidebutton {
@@ -390,6 +391,22 @@
 
         .watch-sidebar-section:first-child .video-list-item:last-child {
             margin-bottom: 15px !important;
+        }
+    }
+if Nosubscountwhensubsed {
+        .yt-subscription-button-subscriber-count-branded-horizontal,
+        .yt-subscription-button-subscriber-count-unbranded-horizontal {
+            display: none !important;
+        }
+        .yt-uix-button-subscribe-branded + .yt-subscription-button-subscriber-count-branded-horizontal,
+        .yt-uix-button-subscribe-unbranded + .yt-subscription-button-subscriber-count-unbranded-horizontal,
+        .yt-uix-button-subscribe-branded + .yt-uix-subscription-preferences-button + .yt-subscription-button-subscriber-count-branded-horizontal,
+        .yt-uix-button-subscribed-branded + .yt-subscription-button-subscriber-count-branded-horizontal.subscribed,
+        .yt-uix-button-subscribed-unbranded + .yt-subscription-button-subscriber-count-unbranded-horizontal.subscribed,
+        .yt-uix-button-subscribed-branded + .yt-uix-subscription-preferences-button + .yt-subscription-button-subscriber-count-branded-horizontal.subscribed {
+            display: inline-block !important;
+            *display: inline;
+            *zoom: 1
         }
     }
 }

@@ -25,6 +25,7 @@
 @var checkbox oldnoft "Old Notifications Icon" 0
 @var checkbox Nosubscountwhensubsed "Hide Subscriber Count When Subscribed to someone" 0 
 @var checkbox olddec "Old Description size" 0
+@var checkbox old404img "Old 404 Image" 0
 ==/UserStyle== */
 @-moz-document domain("www.youtube.com") {
     if guidebutton {
@@ -419,6 +420,18 @@ if Nosubscountwhensubsed {
         if notransitiononautonavcheckbox {
         .yt-uix-checkbox-on-off label > * {
             transition: none !important;
+        }
+    }
+    if old404img {
+        img[src*="/yts/img/ringo/img/image-hh-404-vflP3hqNT.png"] {
+            display: none;
+        }
+        #error-page-hh-illustration {
+            padding-left: 167px;
+            display: block;
+            width: 189px;
+            height: 138px;
+            content: url(https://s.ytimg.com/yts/img/image-hh-404-vflvCykRp.png) !important;
         }
     }
 }

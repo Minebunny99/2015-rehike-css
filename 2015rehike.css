@@ -2,7 +2,7 @@
 @name           2015/16 look for rehike
 @namespace      https://github.com/Minebunny99
 @updateURL      https://github.com/Minebunny99/2015-rehike-css/2015rehike.css
-@version        1.1.6
+@version        1.1.7
 @description    Makes it look like early-mid-late 2015/early-mid 2016
 @author         EpicbonnieSFM
 @preprocessor stylus
@@ -17,6 +17,7 @@
 @var checkbox arialz "Use arial" 0
 @var checkbox smallwatchthumbs "Small Watch thumbs" 0
 @var checkbox oldupnexttext "Old Up Next Text" 0
+@var checkbox notransitiononautonavcheckbox "No transition on autoplay checkbox" 0
 @var checkbox oldautoPlaytext "Old Autoplay Bold" 0
 @var checkbox noautoplay "Remove autoplay" 0
 @var checkbox bigtitletext "Big Title Text" 0
@@ -413,6 +414,11 @@ if Nosubscountwhensubsed {
     if olduploadsize {
         #upload-btn {
             padding: 0 13px;
+        }
+    }
+        if notransitiononautonavcheckbox {
+        .yt-uix-checkbox-on-off label > * {
+            transition: none !important;
         }
     }
 }

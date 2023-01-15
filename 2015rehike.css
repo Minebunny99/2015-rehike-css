@@ -7,6 +7,7 @@
 @author         EpicbonnieSFM
 @preprocessor stylus
 @var checkbox whattowatch "Old What To Watch Text" 0
+@var checkbox mysubscriptions "Old Subscriptions Text" 0
 @var checkbox olduploadsize "Old Upload Button size" 0
 @var checkbox oldmysubsicon "Old My Subscriptions Icon" 0
 @var checkbox hidetrendingguide "Hide Trending Guide" 0
@@ -442,5 +443,17 @@ if Nosubscountwhensubsed {
         background-size: auto;
         width: 10px;
         height: 9px;
+    }
+    if mysubscriptions {
+        #subscriptions-guide-item .display-name span {
+            font-size: 0;
+            line-height: 0;
+        }
+        #subscriptions-guide-item .display-name:after {
+            content: "My Subscriptions";
+            font-size: 13px;
+            line-height: 20px;
+            margin-left: -2.6px;
+        }
     }
 }

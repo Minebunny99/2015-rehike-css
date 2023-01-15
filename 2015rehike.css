@@ -434,4 +434,13 @@ if Nosubscountwhensubsed {
             content: url(https://s.ytimg.com/yts/img/image-hh-404-vflvCykRp.png) !important;
         }
     }
+    .yt-uix-checkbox-on-off .checked:before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        background: no-repeat url(//s.ytimg.com/yts/imgbin/www-hitchhiker-vfllYIUv0.png) -53px -563px;
+        background-size: auto;
+        width: 10px;
+        height: 9px;
+    }
 }

@@ -2,7 +2,7 @@
 @name           2015/16 look for rehike
 @namespace      https://github.com/Minebunny99
 @updateURL      https://github.com/Minebunny99/2015-rehike-css/2015rehike.css
-@version        1.1.7
+@version        1.1.8
 @description    Makes it look like early-mid-late 2015/early-mid 2016
 @author         EpicbonnieSFM
 @preprocessor stylus
@@ -251,7 +251,7 @@
         }
         #what_to_watch-guide-item .display-name:after {
             content: "What to Watch";
-            font-size: 12px;
+            font-size: 13px;
             line-height: 20px;
             margin-left: -2.6px;
         }

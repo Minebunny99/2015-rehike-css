@@ -299,16 +299,16 @@
     }
     if oldnoft {
         .yt-uix-subscription-preferences-button:before {
-            background: no-repeat url(//s.ytimg.com/yts/imgbin/www-hitchhiker-vflkWou0A.png) -476px -174px !important;
+            background: no-repeat url(//s.ytimg.com/yts/imgbin/www-hitchhiker-vflvB63an.png) 0 -821px !important;
             background-size: auto !important;
-            width: 13px !important;
-            height: 13px !important;
+            width: 12px !important;
+            height: 12px !important;
         }
         .yt-uix-subscription-preferences-button:hover:before {
-            background: no-repeat url(//s.ytimg.com/yts/imgbin/www-hitchhiker-vflkWou0A.png) -388px -261px !important;
+            background: no-repeat url(//s.ytimg.com/yts/imgbin/www-hitchhiker-vflvB63an.png) -136px -1010px !important;
             background-size: auto !important;
-            width: 13px !important;
-            height: 13px !important;
+            width: 12px !important;
+            height: 12px !important;
         }
     }
     if arialz {

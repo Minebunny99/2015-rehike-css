@@ -2,7 +2,7 @@
 @name           2015/16 look for rehike
 @namespace      https://github.com/Minebunny99
 @updateURL      https://userstyles.world/api/style/8225.user.css
-@version        1.1.9
+@version        1.2.0
 @description    Makes it look like early-mid-late 2015/early-mid 2016
 @author         EpicbonnieSFM
 @preprocessor stylus
@@ -27,6 +27,7 @@
 @var checkbox oldnoft "Old Notifications Icon" 0
 @var checkbox Nosubscountwhensubsed "Hide Subscriber Count When Subscribed to someone" 0 
 @var checkbox olddec "Old Description size" 0
+@var checkbox oldcommentstext "Old Comments text" 0
 @var checkbox old404img "Old 404 Image" 0
 @var checkbox oldaccselect "Old Account pfp select" 0
 ==/UserStyle== */
@@ -479,6 +480,11 @@
         }
         .yt-masthead-picker-photo-wrapper img {
             border-radius: 0%;
+        }
+    }
+    if oldcommentstext {
+        .comment-section-header-renderer > b::before {
+            content: "All ";
         }
     }
 }

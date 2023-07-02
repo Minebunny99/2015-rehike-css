@@ -2,7 +2,7 @@
 @name           2015/16 look for rehike
 @namespace      https://github.com/Minebunny99
 @updateURL      https://userstyles.world/api/style/8225.user.css
-@version        1.2.0
+@version        1.2.1
 @description    Makes it look like early-mid-late 2015/early-mid 2016
 @author         EpicbonnieSFM
 @preprocessor stylus
@@ -13,10 +13,11 @@
 @var checkbox hidetrendingguide "Hide Trending Guide" 0
 @var checkbox searchbtn "Old search button icon" 0
 @var checkbox hidesearchtext "Hide Search Text" 0
-@var select logo "Logo" ["Lzero:default", "Ltwo:2015", "Lthree:2013", "Lfour:2011"]
+@var select logo "Logo" ["Lzero:2016", "Ltwo:2015", "Lthree:2013", "Lfour:2011"]
 @var checkbox guidebutton "Red guide button and right of logo" 0
 @var checkbox countrycode "With country code (2015)" 0
 @var checkbox arialz "Use arial" 0
+@var checkbox oldroboto "Use old roboto" 0
 @var checkbox smallwatchthumbs "Small Watch thumbs" 0
 @var checkbox oldupnexttext "Old Up Next Text" 0
 @var checkbox notransitiononautonavcheckbox "No transition on autoplay checkbox" 0
@@ -26,8 +27,9 @@
 @var checkbox oldshare "Old share Button" 0
 @var checkbox oldnoft "Old Notifications Icon" 0
 @var checkbox Nosubscountwhensubsed "Hide Subscriber Count When Subscribed to someone" 0 
-@var checkbox olddec "Old Description size" 0
+@var select olddec "Old Description size" ["default", "v1", "v2"]
 @var checkbox oldcommentstext "Old Comments text" 0
+@var checkbox hideloveicon "Hides Love icon cuz love icon did not exist in 2015 and 2016" 0
 @var checkbox old404img "Old 404 Image" 0
 @var checkbox oldaccselect "Old Account pfp select" 0
 ==/UserStyle== */
@@ -363,7 +365,59 @@
             font-weight: bold;
         }
     }
-    if olddec {
+    if oldroboto {
+        body,
+        input,
+        button,
+        textarea,
+        select {
+            @font-face {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 500;
+                src: local('Roboto Medium'), local('Roboto-Medium'), url(//fonts.gstatic.com/s/roboto/v15/RxZJdnzeo3R5zSexge8UUaCWcynf_cDxXwCLxiixG1c.ttf)format('truetype');
+            }
+
+            @font-face {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400;
+                src: local('Roboto Regular'), local('Roboto-Regular'), url(//fonts.gstatic.com/s/roboto/v15/zN7GBFwfMP4uA6AR0HCoLQ.ttf)format('truetype');
+            }
+
+            @font-face {
+                font-family: 'Roboto';
+                font-style: italic;
+                font-weight: 400;
+                src: local('Roboto Italic'), local('Roboto-Italic'), url(//fonts.gstatic.com/s/roboto/v15/W4wDsBUluyw0tK3tykhXEfesZW2xOQ-xsNqO47m55DA.ttf)format('truetype');
+            }
+
+            @font-face {
+                font-family: 'Roboto';
+                font-style: italic;
+                font-weight: 500;
+                src: local('Roboto Medium Italic'), local('Roboto-MediumItalic'), url(//fonts.gstatic.com/s/roboto/v15/OLffGBTaF0XFOW1gnuHF0Z0EAVxt0G0biEntp43Qt6E.ttf)format('truetype');
+            }
+        }
+    }
+    if olddec==default {
+        #watch-description {
+            color: #333;
+            line-height: 14px;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+        }
+        .yt-uix-expander-collapsed #watch-description-text {
+            max-height: 42px;
+            overflow: hidden;
+            padding-top: 4px;
+        }
+        #watch-description-text {
+            padding-top: 4px;
+        }
+    }
+    if olddec==v1 {
         #watch-description {
             color: #333;
             line-height: 17px;
@@ -375,6 +429,24 @@
             max-height: 51px;
             overflow: hidden;
             padding-top: 0px;
+        }
+        #watch-description-text {
+            padding-top: 0px;
+        }
+    }
+
+    if olddec==v2 {
+        #watch-description {
+            color: #333;
+            line-height: 17px;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+        }
+        .yt-uix-expander-collapsed #watch-description-text {
+            max-height: 51px;
+            overflow: hidden;
+            padding-top: 4px;
         }
         #watch-description-text {
             padding-top: 0px;
@@ -485,6 +557,11 @@
     if oldcommentstext {
         .comment-section-header-renderer > b::before {
             content: "All ";
+        }
+    }
+    if hideloveicon {
+        .yt-uix-creator-heart-button {
+            display: none;
         }
     }
 }
